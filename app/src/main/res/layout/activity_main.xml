@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/Wilaya"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/border_edittext"
+        android:hint="Entrer la wilaya"
+        android:layout_weight="70"/>
+
+    <Button
+        android:id="@+id/chercher"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:text="chercher"
+        android:background="@drawable/border_button"
+        android:layout_weight="30"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/iconWeather"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/iconw01d"
+            android:scaleType="centerCrop"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="20 °C"/>
+            <TextView
+                android:id="@+id/tvW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Alger Algerie"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/afficher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ListView
+        android:id="@+id/wliste"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
